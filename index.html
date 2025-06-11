@@ -472,60 +472,68 @@
         }
         
         /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .header-text h1 {
-                font-size: 2.5rem;
-            }
-            
-            .profile-image {
-                width: 200px;
-                height: 200px;
-            }
-            
-            .research-areas {
-                grid-template-columns: 1fr;
-            }
-            
-            .achievement-sections {
-                grid-template-columns: 1fr;
-            }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .research-areas {
+        grid-template-columns: 1fr;
+    }
+    
+    .achievement-sections {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 
-            <!--- added --->
-            /* Add this for container */
-            .container {
-                max-width: 100% !important;
-            padding-left: 1rem !important;
-            padding-right: 1rem !important;
-            }
-        <!--- end of added --->
-            
-        }
-        
-        @media (min-width: 1024px) {
-            .header-content {
-                flex-direction: row;
-                text-align: left;
-                align-items: center;
-            }
-            
-            .header-text {
-                flex: 1;
-            }
-        }
+    /* Container adjustments */
+    .container {
+        max-width: 100% !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    /* Fix publication text visibility on mobile */
+    .publication-authors, 
+    .publication-title, 
+    .publication-journal, 
+    .publication-links a {
+        color: #111 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header-content {
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+    }
+    
+    .header-text {
+        flex: 1;
+    }
+}
+
         
         /* Smooth scrolling and animations */
         .fade-in {
