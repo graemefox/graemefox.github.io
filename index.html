@@ -1,202 +1,860 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <style type="text/css">
-    @font-face {
-      font-family: "Computer Modern";
-      src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
-    }
-    @font-face {
-      font-family: "Computer Modern";
-      src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsx.otf');
-      font-weight: bold;
-    }
-    @font-face {
-      font-family: "Computer Modern";
-      src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsi.otf');
-      font-style: italic, oblique;
-    }
-    @font-face {
-      font-family: "Computer Modern";
-      src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunbxo.otf');
-      font-weight: bold;
-      font-style: italic, oblique;
-    }
-    div {
-       word-wrap: break-word;
-       width: 800px;
-    }
-    body {
-      font-family: "Computer Modern", sans-serif;
-    }
-  </style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Graeme Fox - Research Fellow Bioinformatician specializing in genomics, bioinformatics, and ecological genetics at The University of Nottingham">
+    <meta name="keywords" content="bioinformatics, genomics, ecological genetics, research, University of Nottingham, DeepSEQ">
+    <title>Graeme Fox - Research Fellow Bioinformatician</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e40af;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #1e40af;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e293b 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            border: 4px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .header-text h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .header-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            color: #bfdbfe;
+            font-size: 1.1rem;
+        }
+        
+        .header-info .title {
+            color: #93c5fd;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .header-info a {
+            color: #bfdbfe;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .header-info a:hover {
+            color: white;
+        }
+        
+        .qualifications {
+            color: #93c5fd;
+            font-weight: 500;
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #1f2937;
+        }
+        
+        /* About Section */
+        .about {
+            background: white;
+        }
+        
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4b5563;
+            margin-bottom: 3rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text a {
+            color: #1e40af;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .about-text a:hover {
+            color: #1d4ed8;
+        }
+        
+        .research-areas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .research-card {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #e0f2fe;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .research-icon {
+            width: 60px;
+            height: 60px;
+            background: #1e40af;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .research-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+        }
+        
+        .research-card p {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        
+        /* Publications Section */
+        .publications {
+            background: #f9fafb;
+        }
+        
+        .year-group {
+            margin-bottom: 3rem;
+        }
+        
+        .year-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e40af;
+            border-bottom: 3px solid #bfdbfe;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .publication {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .publication:hover {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .publication-authors {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .publication-authors .highlight {
+            color: #1e40af;
+            font-weight: 600;
+        }
+        
+        .publication-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+        
+        .publication-journal {
+            color: #1e40af;
+            font-style: italic;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .publication-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .publication-links a {
+            color: #1e40af;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: color 0.3s ease;
+        }
+        
+        .publication-links a:hover {
+            color: #1d4ed8;
+        }
+        
+        .press-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .press-label {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        
+        .press-links a {
+            color: #d97706;
+        }
+        
+        .press-links a:hover {
+            color: #b45309;
+        }
+        
+        /* Achievements Section */
+        .achievements {
+            background: white;
+        }
+        
+        .achievement-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .achievement-category {
+            text-align: center;
+        }
+        
+        .achievement-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .achievement-icon.grants { background: linear-gradient(135deg, #10b981, #059669); }
+        .achievement-icon.awards { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+        .achievement-icon.conferences { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+        .achievement-icon.media { background: linear-gradient(135deg, #f59e0b, #d97706); }
+        
+        .achievement-category h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1f2937;
+        }
+        
+        .achievement-sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+        }
+        
+        .achievement-section h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .achievement-item {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #bbf7d0;
+            margin-bottom: 1rem;
+        }
+        
+        .achievement-item.awards {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-color: #bfdbfe;
+        }
+        
+        .achievement-item.conferences {
+            background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+            border-color: #e9d5ff;
+        }
+        
+        .achievement-item.media {
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border-color: #fde68a;
+        }
+        
+        .achievement-item p {
+            color: #374151;
+            line-height: 1.6;
+        }
+        
+        .achievement-item strong {
+            color: #1f2937;
+        }
+        
+        .achievement-item a {
+            color: #1e40af;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .achievement-item a:hover {
+            color: #1d4ed8;
+        }
+        
+        .media-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .footer-section p, .footer-section li {
+            color: #d1d5db;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: #93c5fd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            text-align: center;
+            color: #9ca3af;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .header-text h1 {
+                font-size: 2.5rem;
+            }
+            
+            .profile-image {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .research-areas {
+                grid-template-columns: 1fr;
+            }
+            
+            .achievement-sections {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .header-content {
+                flex-direction: row;
+                text-align: left;
+                align-items: center;
+            }
+            
+            .header-text {
+                flex: 1;
+            }
+        }
+        
+        /* Smooth scrolling and animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
-<h2>Graeme Fox</h2>
-<h3>Research fellow bioinformatician @ DeepSEQ, The University of Nottingham</h3>
-<h3> PhD (Manchester Metropolitan University)</h3>
-<h3>MSc & BSc (Hons) (The University of Liverpool)</h3><br>
-<img src="profile.jpg",  alt="hi" class="inline" height="300"/>
-<div>
-<br>
-I am currently a research fellow at The University of Nottingham based within 
-<a href="https://www.nottingham.ac.uk/deepseq/">DeepSEQ;</a> the bioinformatics
-and genomics core facility.
-I have a very general interest in genomics and bioinformatics, with particular focus on ecological
-genetics. My work involves using cutting edge next-generation sequencing technologies and
-bioinformatics approaches to answer a broad range of biological questions.<br>
-My previous roles have included research and training at the NEOF facility at The University of Sheffield,
-and roles involving the use of genomics and bioinformatics approaches
-for diet analysis in <i>A. mellifera</i>, and qPCR approaches to describe changes in the gut
-microbiome of <i> B. terrestris</i>. My PhD and role as a research associate at Manchester Metropolitan
-University involved various next-generation sequencing methods and applications in
-conservation and ecology. I also have experience as a research rechnician at The University of
-Manchester in both the soil ecology group and genomics core facility.<br>
-<br>
-<h5>Get in touch: graeme.fox@nottingham.ac.uk</h5>
-<h2>Published Work</h2>
-<b>2025<br></b>
-<br>
-George Day, Thomas Bolderstone, Greg J. Conway, Tony Cross, Tony Davis, Matilda Dolan, Mervyn Greening, Colin Neale, Ian Nicholson, Kim Nicholson, Ann Ward, Nik Ward, Graeme Fox, Ewan Harney, Helen Hipperson, Kathryn Maher, Jamie Thompson, Rachel Tucker, Dean Waters, Kate L. Durrant, Terry Burke, Jon Slate, Kathryn E. Arnold (2025) The Genomic Signature of Demographic Decline in a Long-Distance Migrant in a Range-Extreme Population. <i>Molecular Ecology</i> e17805 DOI:https://doi.org/10.1111/mec.17805
-<br><br>
-Simon Deacon, Inswasti Cahyani, Nadine Holmes, Graeme Fox, Rory Munro, Satrio Wibowo, Thomas Murray, Hannah Mason, Mark Housley, Daniel Martin, Abdi Sharif, Areeba Patel, Robert Goldspring, Sebastian Brandner, Felix Sahm, Stuart Smith, Simon Paine, Matthew Loose (2025) ROBIN: A unified nanopore-based assay integrating intraoperative methylome classification and next-day comprehensive profiling for ultra-rapid tumor diagnosis. <i>Neuro-Oncology</i> 2025;, noaf103, https://doi.org/10.1093/neuonc/noaf103
-<br><br>
-Press:
-<a href="https://www.bbc.co.uk/news/articles/cpvkmkk4pv4o">BBC News</a>
-<a href="https://www.theguardian.com/science/2025/may/21/brain-tumour-diagnosis-could-be-made-within-hours-say-researchers">The Guardian</a>
-<br><br>
-Nash, A., Lee, IN., Fox, G. et al. (2025) An evaluation of spraying as a delivery method for human mesenchymal stem cells suspended in low-methyl pectin solutions. <i>Stem Cell Res Ther</i> 16, 246. https://doi.org/10.1186/s13287-025-04331-4
-<br><br>
-Patel, A., Göbel, K., Ille, S. <i>et al.</i> (2025) Prospective, multicenter validation of a platform for rapid molecular profiling of central nervous system tumors. <i>Nature Medicine</i> DOI: https://doi.org/10.1038/s41591-025-03562-5
-<br><br>
-<b>2024<br></b>
-<br>
-George Day, Graeme Fox, Helen Hipperson, Kathryn H. Maher, Rachel Tucker, Gavin J. Horsburgh, Dean Waters, Kate L. Durant, Terry Burke, Jon Slate, Kathryn E. Arnold (2024) Revealing the Demographic History of the European Nightjar (<i>Caprimulgus europaeus</i>). <i>Ecology and Evolution.</i> Volume 14, Issue 10 October 2024 e70460. DOI: https://doi.org/10.1002/ece3.70460
-<br><br>
-<b>2022<br></b>
-<br>
-Graeme Fox, Latha R. Vellaniparambil, Loreto Ros, Joshua Sammy, Richard F. Preziosi, Jennifer K. Rowntree (2022) Complex urban environments provide <i>Apis mellifera</i> with a richer plant forage than suburban and more rural landscapes. <i>Ecology and Evolution.</i> Volume 12, Issue 11 e9490. DOI: https://doi.org/10.1002/ece3.9490
-<br><br>
-Steven, W.J. Canty, John Paul Kennedy, Graeme Fox, Kenan Matterson, Vanessa L. González, Mayra L. Núñez-Vallecillo, Richard F. Preziosi & Jennifer K. Rowntree (2022) Mangrove diversity is more than fringe deep. <i>Scientific Reports</i> 12, Article Number 1695 (2022). DOI: https://doi.org/10.1038/s41598-022-05847-y
-<br><br>
-<b>2021<br></b>
-<br>
-Alex Williams, Holly Langridge, Angela L. Straathof, Graeme Fox, Howbeer Muhammadali, Katherine A. Hollywood, Royston Goodacre & Franciska T. de Vries (2021) Comparing root exudate collection techniques: An improved hybrid method. <i>Soil Biology and Biochemistry.</i> 161. DOI: https://doi.org/10.1016/j.soilbio.2021.108391
-<br><br>
-Steven, W.J. Canty, Graeme Fox, Jennifer K. Rowntree, Richard F. Preziosi (2021) Genetic structure of a remnant Acropora cervicornis population. Scientific Reports. 11:3523. DOI: https://doi.org/10.1038/s41598-021-83112-4
-<br><br>
-<b>2020<br></b>
-<br>
-Milena Benavides-Serrato, Yully Fernanda Contreras-Rueda, Lina M. Barrios-Gardelis, Graeme Fox, Thomas D. Hughes, Néstor Hernando Campos-Campos, Richard F. Preziosi
-(2020) Isolation and characterization of 17 polymorphic microsatellite loci for a sea urchin (<i>Echinometra lucunter</i>: Echinometridae). <i>Rev. Acad. Colomb. Cienc. Ex. Fis. Nat. </i>44(172): 759-767. DOI: https://doi.org/10.18257/raccefyn.1113
-<br><br>
-<b>2019<br></b>
-<br>
-Graeme Fox, Richard F. Preziosi, Rachael A. Antwis, Fraser J. Combe, W. Edwin Harris, Ian R. Hartley, Andrew C. Kitchener, Selvino R. de Kort,
-Anne-Isola Nekaris, Milena Benavides-Serrato, Jennifer K. Rowntree (2019) Multi-individual microsatellite identification: a multiple genome approach to microsatellite design (MiMi).
-<i>Molecular Ecology Resources</i> DOI: https://doi.org/10.1111/1755-0998.13065
-<br><br>
-<b>2018<br></b>
-<br>
-Graeme Fox, Iulia Darolti, Jean-Denis Hibbitt, Richard F. Preziosi, John L. Fitzpatrick, Jennifer K. Rowntree (2018)
-Genetic assessment of ex situ populations to aid species conservation and maintain heterozygosity in non-model species.
-<i>Journal of Zoo and Aquarium Research.</i>
-6(2): 50-56.
-<br><br>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Graeme Fox</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-Combe F, Taylor-Cox E, Fox G, Sandri T, Davis N, Jones M, Cain B, Mallon D, Harris E (2018)
-Rapid isolation and characterization of microsatellites in the critically endangered Mountain Bongo <i>(Tragelaphus eurycerus isaaci)</i>.
-<i>Journal of Genetics.</i>
-DOI: https://doi.org/10.1007/s12041-018-0922-z
-<br><br>
-Rachael Antwis, Sarah Griffiths, Xavier Harrison, Ché Weldon, Michael Wood, Abigail Pretorius, Kevin Hopkins, Graeme Fox, and Richard Preziosi (2018)
-Genetic Variability and Ontogeny Predict Microbiome Structure in a Disease-Challenged Montane Amphibian.
-<i>Multidisciplinary Journal of Microbial Ecology.</i> DOI: https://doi.org/10.1038/s41396-018-0167-0
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <img src="profile.jpg" alt="Graeme Fox" class="profile-image">
+                <div class="header-text">
+                    <h1>Graeme Fox</h1>
+                    <div class="header-info">
+                        <div class="title">🧬 Research Fellow Bioinformatician</div>
+                        <div>📍 DeepSEQ, The University of Nottingham</div>
+                        <div>📧 <a href="mailto:graeme.fox@nottingham.ac.uk">graeme.fox@nottingham.ac.uk</a></div>
+                    </div>
+                    <div class="qualifications">
+                        <div>🎓 PhD (Manchester Metropolitan University)</div>
+                        <div>🎓 MSc & BSc (Hons) (The University of Liverpool)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<br><br>
-D'Cruze N, Singh B, Mookerjee A, Hunter K, Brassey CA, Rowntree J, Megson S, Fox G, Louies J, Sharath RS Macdonald DW (2018)
-What’s in a name? Wildlife traders evade authorities using code words.
-<i>Oryx.</i>
-52(1). 13-15
-<br><br>
-<b>2017<br></b>
-<br>
-Ramirez K, Knight C, de Hollander M, Brearley F, Constantinides C, Cotton A, Creer S, Crowther T, Davison J , Delgado-Baquerizo M, Dorrepaal E, Elliott D, Fox G, Griffiths R,
-Hale C, Hartman K, Houlden A, Jones D, Krab E, Maestre F, McGuire K, Monteux S, Orr C, van der Putten W, Roberts I, Robinson D, Rocca J, Rowntree J, Schlaeppi K, Shepherd M,
-Singh B, Straathof A, Bhatnagar J, Thion C, van der Heijden M, and de Vries F (2017)
-Detecting macroecological patterns in bacterial communities across independent studies of global soils.
-<i>Nature Microbiology.</i> (DOI:10.1038/s41564-017-0062-x).
-<br><br>
-Madhura Castelino, Stephen Eyre, John Moat, Graeme Fox, Paul Martin, Pauline Ho, Mathew Upton & Anne Barton (2017) Optimisation of methods for bacterial skin microbiome investigation: primer selection and comparison of the 454 versus MiSeq platform
-. <i> BMC Microbiology.</i>7. Article Number 23. DOI: 10.1186/s12866-017-0927-4
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am currently a research fellow at The University of Nottingham based within <a href="https://www.nottingham.ac.uk/deepseq/">DeepSEQ</a>; the bioinformatics and genomics core facility.</p>
+                    
+                    <div class="research-areas">
+                        <div class="research-card">
+                            <div class="research-icon">🧬</div>
+                            <h3>Genomics</h3>
+                            <p>Next-generation sequencing technologies and applications</p>
+                        </div>
+                        <div class="research-card">
+                            <div class="research-icon">🔬</div>
+                            <h3>Bioinformatics</h3>
+                            <p>Computational approaches to biological questions</p>
+                        </div>
+                        <div class="research-card">
+                            <div class="research-icon">🌿</div>
+                            <h3>Ecological Genetics</h3>
+                            <p>Conservation and ecological applications</p>
+                        </div>
+                    </div>
+                    
+                    <p>I have a very general interest in genomics and bioinformatics, with particular focus on ecological genetics. My work involves using cutting edge next-generation sequencing technologies and bioinformatics approaches to answer a broad range of biological questions.</p>
+                    
+                    <p>My previous roles have included research and training at the NEOF facility at The University of Sheffield, and roles involving the use of genomics and bioinformatics approaches for diet analysis in <em>A. mellifera</em>, and qPCR approaches to describe changes in the gut microbiome of <em>B. terrestris</em>. My PhD and role as a research associate at Manchester Metropolitan University involved various next-generation sequencing methods and applications in conservation and ecology.</p>
+                    
+                    <p>I also have experience as a research technician at The University of Manchester in both the soil ecology group and genomics core facility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Publications Section -->
+    <section id="publications" class="publications">
+        <div class="container">
+            <h2 class="section-title">Published Work</h2>
+            
+            <!-- 2025 Publications -->
+            <div class="year-group">
+                <h3 class="year-title">2025</h3>
+                
+                <div class="publication">
+                    <div class="publication-authors">
+                        George Day, Thomas Bolderstone, Greg J. Conway, Tony Cross, Tony Davis, Matilda Dolan, Mervyn Greening, Colin Neale, Ian Nicholson, Kim Nicholson, Ann Ward, Nik Ward, <span class="highlight">Graeme Fox</span>, Ewan Harney, Helen Hipperson, Kathryn Maher, Jamie Thompson, Rachel Tucker, Dean Waters, Kate L. Durrant, Terry Burke, Jon Slate, Kathryn E. Arnold
+                    </div>
+                    <div class="publication-title">The Genomic Signature of Demographic Decline in a Long-Distance Migrant in a Range-Extreme Population</div>
+                    <div class="publication-journal">Molecular Ecology e17805</div>
+                    <div class="publication-links">
+                        <a href="https://doi.org/10.1111/mec.17805">🔗 DOI Link</a>
+                    </div>
+                </div>
+                
+                <div class="publication">
+                    <div class="publication-authors">
+                        Simon Deacon, Inswasti Cahyani, Nadine Holmes, <span class="highlight">Graeme Fox</span>, Rory Munro, Satrio Wibowo, Thomas Murray, Hannah Mason, Mark Housley, Daniel Martin, Abdi Sharif, Areeba Patel, Robert Goldspring, Sebastian Brandner, Felix Sahm, Stuart Smith, Simon Paine, Matthew Loose
+                    </div>
+                    <div class="publication-title">ROBIN: A unified nanopore-based assay integrating intraoperative methylome classification and next-day comprehensive profiling for ultra-rapid tumor diagnosis</div>
+                    <div class="publication-journal">Neuro-Oncology 2025;, noaf103</div>
+                    <div class="publication-links">
+                        <a href="https://doi.org/10.1093/neuonc/noaf103">🔗 DOI Link</a>
+                        <div class="press-links">
+                            <span class="press-label">📰 Press:</span>
+                            <a href="https://www.bbc.co.uk/news/articles/cpvkmkk4pv4o">BBC News</a>
+                            <a href="https://www.theguardian.com/science/2025/may/21/brain-tumour-diagnosis-could-be-made-within-hours-say-researchers">The Guardian</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="publication">
+                    <div class="publication-authors">
+                        Nash, A., Lee, IN., <span class="highlight">Fox, G.</span> et al.
+                    </div>
+                    <div class="publication-title">An evaluation of spraying as a delivery method for human mesenchymal stem cells suspended in low-methyl pectin solutions</div>
+                    <div class="publication-journal">Stem Cell Res Ther 16, 246</div>
+                    <div class="publication-links">
+                        <a href="https://doi.org/10.1186/s13287-025-04331-4">🔗 DOI Link</a>
+                    </div>
+                </div>
+                
+                <div class="publication">
+                    <div class="publication-authors">
+                        Patel, A., Göbel, K., Ille, S. et al.
+                    </div>
+                    <div class="publication-title">Prospective, multicenter validation of a platform for rapid molecular profiling of central nervous system tumors</div>
+                    <div class="publication-journal">Nature Medicine</div>
+                    <div class="publication-links">
+                        <a href="https://doi.org/10.1038/s41591-025-03562-5">🔗 DOI Link</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 2024 Publications -->
+            <div class="year-group">
+                <h3 class="year-title">2024</h3>
+                
+                <div class="publication">
+                    <div class="publication-authors">
+                        George Day, <span class="highlight">Graeme Fox</span>, Helen Hipperson, Kathryn H. Maher, Rachel Tucker, Gavin J. Horsburgh, Dean Waters, Kate L. Durant, Terry Burke, Jon Slate, Kathryn E. Arnold
+                    </div>
+                    <div class="publication-title">Revealing the Demographic History of the European Nightjar (<em>Caprimulgus europaeus</em>)</div>
+                    <div class="publication-journal">Ecology and Evolution. Volume 14, Issue 10 October 2024 e70460</div>
+                    <div class="publication-links">
+                        <a href="https://doi.org/10.1002/ece3.70460">🔗 DOI Link</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 2022 Publications -->
+            <div class="year-group">
+                <h3 class="year-title">2022</h3>
+                
+                <div class="publication">
+                    <div class="publication-authors">
+                        <span class="highlight">Graeme Fox</span>, Latha R. Vellaniparambil, Loreto Ros, Joshua Sammy, Richard F. Preziosi, Jennifer K. Rowntree
+                    </div>
+                    <div class="publication-title">Complex urban environments provide <em>Apis mellifera</em> with a richer plant forage than suburban and more rural landscapes</div>
+                    <div class="publication-journal">Ecology and Evolution. Volume 12, Issue 11 e9490</div>
+                    <div class="publication-links">
+                        <a href="https://doi.org/10.1002/ece3.9490">🔗 DOI Link</a>
+                    </div>
+                </div>
+                
+                <div class="publication">
+                    <div class="publication-authors">
+                        Steven, W.J. Canty, John Paul Kennedy, <span class="highlight">Graeme Fox</span>, Kenan Matterson, Vanessa L. González, Mayra L. Núñez-Vallecillo, Richard F. Preziosi & Jennifer K. Rowntree
+                    </div>
+                    <div class="publication-title">Mangrove diversity is more than fringe deep</div>
+                    <div class="publication-journal">Scientific Reports 12, Article Number 1695 (2022)</div>
+                    <div class="publication-links">
+                        <a href="https://doi.org/10.1038/s41598-022-05847-y">🔗 DOI Link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<br><br>
-<b>2016<br></b>
-<br>
-Griffiths SM, Fox G, Briggs PJ, Donaldson IJ, Hood S, Richardson P, Leaver GW, Truelove NK & Preziosi RF (2016)
-A Galaxy-based bioinformatics pipeline for optimised, streamlined microsatellite development from Illumina next-generation sequencing data.
-<i>Conservation Genetics Resources.</i>
-DOI 10.1007/s12686-016-0570-7
-<br><br>
-Moat J, Rizoulis A, Fox G & Upton M (2016)
-Domestic shower hose biofilms contain fungal species capable of causing opportunistic infection.
-<i>Journal of Water and Health.</i> 14(4). DOI: 10.2166/wh.2016.297
-<br><br>
-<b>2015<br></b>
-<br>
-Langarica-Fuentes A, Fox G, Robson GD (2015)
-Metabarcoding analysis of home composts reveals distinctive fungal communities with a high number of unassigned sequences.
-<i>Microbiology.</i>
-doi: 10.1099/mic.0.000153
-<br><br>
-Dr Madhura Castelino, MBBS, Stephen Eyre, PhD, John Moat, MSc, Graeme Fox, MSc, Paul Martin, MPhil, Umer Ijaz, PhD, Christopher Quince, PhD,
-Pauline Ho, PhD, Mathew Upton, PhD, Anne Barton, PhD (2015)
-The skin microbiome in psoriatic arthritis: methodology development and pilot data.
-<i>The Lancet.</i> 385(1): S27.
- <br><br>
-<b>2014<br></b>
-<br>
-Adrian Langarica-Fuentes, Pauline S Handley PhD, Ashley Houlden PhD, Graeme Fox, Geoffrey D Robson PhD (2014)
-An investigation of the biodiversity of thermophilic and thermotolerant fungal species in composts using culture-based and molecular techniques.
-<i>Fungal Ecology.</i> 11. 132-144. Elsevier.
-<br><br>
-Langarica-Fuentes, Adrian; Zafar, Urooj; Heyworth, Alan; Brown, Thomas; Fox, Graeme; Robson, Geoff. (2014)
-Fungal succession in an in-vessel composting system characterised using DGGE and 454-pyrosequencing.
-<i>FEMS Microbiology Ecology.</i> 88. 296-308
-<br><br>
-<b>2013<br></b>
-<br>
-David Penney PhD, Caroline Wadsworth; Graeme Fox; Sandra L Kennedy; Richard F Preziosi; Terence A Brown. (2013)
-Absence of Ancient DNA in Sub-Fossil Insect Inclusions Preserved in 'Anthropocene' Colombian Copal.
-<i>PLOSONE</i> 8(9):e73150.
-DOI: https://doi.org/10.1371/journal.pone.0073150
-<br><br>
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <h2 class="section-title">Achievements</h2>
+            
+            <div class="achievement-categories">
+                <div class="achievement-category">
+                    <div class="achievement-icon grants">💰</div>
+                    <h3>Grants</h3>
+                </div>
+                <div class="achievement-category">
+                    <div class="achievement-icon awards">🏆</div>
+                    <h3>Awards</h3>
+                </div>
+                <div class="achievement-category">
+                    <div class="achievement-icon conferences">🎤</div>
+                    <h3>Conferences</h3>
+                </div>
+                <div class="achievement-category">
+                    <div class="achievement-icon media">📰</div>
+                    <h3>Media</h3>
+                </div>
+            </div>
+            
+            <div class="achievement-sections">
+                <div>
+                    <h3>💰 Grants Awarded</h3>
+                    <div class="achievement-item">
+                        <p><strong>November 2020</strong> - Awarded a grant from the <a href="https://www.evacranetrust.org/">Eva Crane Trust</a> for the project: "Healthy diet, healthy guts, healthy bees."</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3>🏆 Awards</h3>
+                    <div class="achievement-item awards">
+                        <p><strong>February 2020</strong> - Post-Graduate Research Paper Award <strong>(1st place)</strong> – Ecology and Environment Research Centre, Manchester Metropolitan University.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 3rem;">
+                <h3>🎤 Conference Talks & Posters</h3>
+                <div class="achievement-item conferences">
+                    <p><strong>December 2020</strong> - British Ecological Society Annual Meeting 2020: Talk titled "A Hive of Activity – GIS and DNA sequencing reveal the effect urban spaces have on bee diet"</p>
+                </div>
+                <div class="achievement-item conferences">
+                    <p><strong>December 2019</strong> - British Ecological Society Annual Meeting 2019: Talk titled "Why you should be using multiple genomes when developing new microsatellite markers. A new tool for a multiple genome approach to microsatellite design (MiMi)."</p>
+                </div>
+                <div class="achievement-item conferences">
+                    <p><strong>December 2016</strong> - British Ecological Society Annual Meeting 2016: Poster titled "<em>Ex situ</em> conservation of the endangered undulate ray (<em>Raja undulata</em>)."</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 3rem;">
+                <h3>📰 Work In The Press</h3>
+                <div class="achievement-item media">
+                    <p>Some work the department performed on trade in 'hatha jodi': a root believed to bring good luck in some cultures. Trade in the plant has been fuelling illicit trade in animal parts.</p>
+                    <div class="media-links">
+                        <a href="https://gizmodo.com/if-you-ordered-a-rare-indian-root-online-its-probably-1796245321">Gizmodo</a>
+                        <a href="https://www.telegraph.co.uk/news/2017/06/20/lizard-penis-passed-lucky-plant-wide-ranging-scam/">The Telegraph</a>
+                        <a href="http://www.bbc.co.uk/news/world-asia-india-40323340">BBC</a>
+                    </div>
+                </div>
+                <div class="achievement-item media">
+                    <p>My work on captive populations of <em>Raja undulata</em> has been featured on <a href="http://www.bbc.co.uk/earth/story/20141112-ray-dna-mapped-to-stop-inbreeding">BBC Earth</a> and Manchester University News.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<h2>Grants Awarded</h2>
-November 2020 - awarded a grant from the <a href="https://www.evacranetrust.org/">Eva Crane Trust</a> for the project: "Healthy diet, healthy guts, healthy bees."
-<br><br>
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p>📧 <a href="mailto:graeme.fox@nottingham.ac.uk">graeme.fox@nottingham.ac.uk</a></p>
+                    <p>📍 DeepSEQ<br>The University of Nottingham</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Research Focus</h3>
+                    <ul>
+                        <li>• Genomics & Bioinformatics</li>
+                        <li>• Ecological Genetics</li>
+                        <li>• Next-Generation Sequencing</li>
+                        <li>• Conservation Biology</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Qualifications</h3>
+                    <p>🎓 PhD - Manchester Metropolitan University</p>
+                    <p>🎓 MSc & BSc (Hons) - University of Liverpool</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 Graeme Fox. Academic Portfolio Website.</p>
+            </div>
+        </div>
+    </footer>
 
-<h2>Awards</h2>
-February 2020 - Post-Graduate Research Paper Award (<i>1st place</i>) – Ecology and Environment Research Centre, Manchester Metropolitan University.
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
 
-<h2>Conference Talks & Posters</h2>
-December 2020 - British Ecological Society Annual Meeting 2020: Talk titled "A Hive of Activity – GIS and DNA sequencing reveal the effect urban spaces have on bee diet”
-<br><br>
-December 2019 - British Ecological Society Annual Meeting 2019: Talk titled "Why you should be using multiple genomes when developing new microsatellite markers. A new tool for a multiple genome approach to microsatellite design (MiMi)."
-<br><br>
-December 2016 - British Ecological Society Annual Meeting 2016: Poster titled "<i>Ex situ</i> conservation of the endangered undulate ray (<i>Raja undulata</i>)."
-<br><br>
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            }
+        });
 
-<h2>Work In The Press</h2>
-Some work the department performed on trade in 'hatha jodi': a root believed to bring good luck in some cultures:<br>
-Trade in the plant has been fuelling illicit trade in animal parts. <br>
-This work has been featured at <a href="https://gizmodo.com/if-you-ordered-a-rare-indian-root-online-its-probably-1796245321">Gizmodo</a>,
-<a href="https://www.telegraph.co.uk/news/2017/06/20/lizard-penis-passed-lucky-plant-wide-ranging-scam/">The Telegraph</a>, and the
-<a href="http://www.bbc.co.uk/news/world-asia-india-40323340">BBC</a> amongst others, with a range of great headlines.
-<br><br>
-My work on captive populations of <i>Raja undulata</i> has been featured on <a href="http://www.bbc.co.uk/earth/story/20141112-ray-dna-mapped-to-stop-inbreeding">BBC Earth</a>
- and Manchester University News.
-</div>
+        // Simple fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animation
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
