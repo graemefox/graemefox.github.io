@@ -2,13 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<!---    <meta name="viewport" content="width=device-width, initial-scale=1.0"> --->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
     <meta name="description" content="Graeme Fox - Research Fellow Bioinformatician specializing in genomics, bioinformatics, and ecological genetics at The University of Nottingham">
     <meta name="keywords" content="bioinformatics, genomics, ecological genetics, research, University of Nottingham, DeepSEQ">
     <title>Graeme Fox - Research Fellow Bioinformatician</title>
-    
+
     <style>
         * {
             margin: 0;
@@ -189,6 +187,12 @@
             text-align: center;
             border: 1px solid #e0f2fe;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* Fixed text wrapping */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            width: 100%;
+            min-width: 0;
         }
         
         .research-card:hover {
@@ -214,11 +218,19 @@
             font-weight: 600;
             margin-bottom: 0.5rem;
             color: #1f2937;
+            /* Fixed text wrapping */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
         }
         
         .research-card p {
             color: #6b7280;
             font-size: 0.9rem;
+            /* Fixed text wrapping */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
         }
         
         /* Publications Section - SIMPLIFIED */
@@ -425,22 +437,42 @@
             margin-bottom: 2rem;
         }
         
+        .footer-section {
+            /* Fixed text wrapping */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            width: 100%;
+            min-width: 0;
+        }
+        
         .footer-section h3 {
             font-size: 1.3rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
             color: white;
+            /* Fixed text wrapping */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
         }
         
         .footer-section p, .footer-section li {
             color: #d1d5db;
             margin-bottom: 0.5rem;
+            /* Fixed text wrapping */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
         }
         
         .footer-section a {
             color: #93c5fd;
             text-decoration: none;
             transition: color 0.3s ease;
+            /* Fixed text wrapping */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         
         .footer-section a:hover {
@@ -499,6 +531,24 @@
             .pub-links {
                 flex-direction: column;
                 align-items: flex-start;
+            }
+
+            /* Ensure research cards have proper minimum width on mobile */
+            .research-areas {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .research-card {
+                min-width: 0;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            /* Ensure footer sections have proper width constraints */
+            .footer-section {
+                max-width: 100%;
+                width: 100%;
             }
         }
 
