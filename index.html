@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Graeme Fox - Research Fellow Bioinformatician specializing in genomics, bioinformatics, and ecological genetics at The University of Nottingham">
+    <meta name="keywords" content="bioinformatics, genomics, ecological genetics, research, University of Nottingham, DeepSEQ">
+    <title>Graeme Fox - Research Fellow Bioinformatician</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e40af;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #1e40af;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e293b 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            border: 4px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .header-text h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .header-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            color: #bfdbfe;
+            font-size: 1.1rem;
+        }
+        
+        .header-info .title {
+            color: #93c5fd;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .header-info a {
+            color: #bfdbfe;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .header-info a:hover {
+            color: white;
+        }
+        
+        .qualifications {
+            color: #93c5fd;
+            font-weight: 500;
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #1f2937;
+        }
+        
+        /* About Section */
+        .about {
+            background: white;
+        }
+        
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4b5563;
+            margin-bottom: 3rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text a {
+            color: #1e40af;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .about-text a:hover {
+            color: #1d4ed8;
+        }
+        
+        .research-areas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .research-card {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #e0f2fe;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* Fixed text wrapping */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            width: 100%;
+            min-width: 0;
+        }
+        
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .research-icon {
+            width: 60px;
+            height: 60px;
+            background: #1e40af;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .research-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+            /* Fixed text wrapping */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+        }
+        
+        .research-card p {
+            color: #6b7280;
+            font-size: 0.9rem;
+            /* Fixed text wrapping */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+        }
+        
+        /* Publications Section - SIMPLIFIED */
+        .publications {
+            background: #f9fafb;
+        }
+        
+        .year-section {
+            margin-bottom: 3rem;
+        }
+        
+        .year-header {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1e40af;
+            border-bottom: 2px solid #bfdbfe;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .pub-item {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .pub-item:last-child {
+            border-bottom: none;
+        }
+        
+        .pub-authors {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.5;
+        }
+        
+        .pub-authors .me {
+            color: #1e40af;
+            font-weight: 600;
+        }
+        
+        .pub-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+        
+        .pub-journal {
+            color: #1e40af;
+            font-style: italic;
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .pub-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .pub-links a {
+            color: #1e40af;
+            text-decoration: none;
+            font-size: 0.85rem;
+            padding: 0.25rem 0.5rem;
+            border: 1px solid #bfdbfe;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+        
+        .pub-links a:hover {
+            background: #1e40af;
+            color: white;
+        }
+        
+        .press-item {
+            color: #d97706;
+            border-color: #fde68a;
+        }
+        
+        .press-item:hover {
+            background: #d97706;
+            color: white;
+        }
+        
+        /* Achievements Section */
+        .achievements {
+            background: white;
+        }
+        
+        .achievement-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .achievement-category {
+            text-align: center;
+        }
+        
+        .achievement-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .achievement-icon.grants { background: linear-gradient(135deg, #10b981, #059669); }
+        .achievement-icon.awards { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+        .achievement-icon.conferences { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+        .achievement-icon.media { background: linear-gradient(135deg, #f59e0b, #d97706); }
+        
+        .achievement-category h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1f2937;
+        }
+        
+        .achievement-sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+        }
+        
+        .achievement-section h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .achievement-item {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #bbf7d0;
+            margin-bottom: 1rem;
+        }
+        
+        .achievement-item.awards {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-color: #bfdbfe;
+        }
+        
+        .achievement-item.conferences {
+            background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+            border-color: #e9d5ff;
+        }
+        
+        .achievement-item.media {
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border-color: #fde68a;
+        }
+        
+        .achievement-item p {
+            color: #374151;
+            line-height: 1.6;
+        }
+        
+        .achievement-item strong {
+            color: #1f2937;
+        }
+        
+        .achievement-item a {
+            color: #1e40af;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .achievement-item a:hover {
+            color: #1d4ed8;
+        }
+        
+        .media-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section {
+            /* Fixed text wrapping */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            width: 100%;
+            min-width: 0;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: white;
+            /* Fixed text wrapping */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+        }
+        
+        .footer-section p, .footer-section li {
+            color: #d1d5db;
+            margin-bottom: 0.5rem;
+            /* Fixed text wrapping */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+        }
+        
+        .footer-section a {
+            color: #93c5fd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            /* Fixed text wrapping */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            text-align: center;
+            color: #9ca3af;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .header-text h1 {
+                font-size: 2.5rem;
+            }
+            
+            .profile-image {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .research-areas {
+                grid-template-columns: 1fr;
+            }
+            
+            .achievement-sections {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            .pub-links {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            /* Ensure research cards have proper minimum width on mobile */
+            .research-areas {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .research-card {
+                min-width: 0;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            /* Ensure footer sections have proper width constraints */
+            .footer-section {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .header-content {
+                flex-direction: row;
+                text-align: left;
+                align-items: center;
+            }
+            
+            .header-text {
+                flex: 1;
+            }
+        }
+        
+        /* Smooth scrolling and animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Graeme Fox</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <img src="profile.jpg" alt="Graeme Fox" class="profile-image">
+                <div class="header-text">
+                    <h1>Graeme Fox</h1>
+                    <div class="header-info">
+                        <div class="title">🧬 Research Fellow Bioinformatician</div>
+                        <div>📍 DeepSEQ, The University of Nottingham</div>
+                        <div>📧 <a href="mailto:graeme.fox@nottingham.ac.uk">graeme.fox@nottingham.ac.uk</a></div>
+                    </div>
+                    <div class="qualifications">
+                        <div>🎓 PhD in Ecological Genetics (Manchester Metropolitan University)</div>
+                        <div>🎓 MSc (Conservation Biology) & BSc (Hons) (Biological Sciences) (The University of Liverpool)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am currently a research fellow at The University of Nottingham based within <a href="https://www.nottingham.ac.uk/deepseq/">DeepSEQ</a>; the bioinformatics and genomics core facility.</p>
+                    
+                    <div class="research-areas">
+                        <div class="research-card">
+                            <div class="research-icon">🧬</div>
+                            <h3>Genomics</h3>
+                            <p>Next-generation sequencing technologies and applications</p>
+                        </div>
+                        <div class="research-card">
+                            <div class="research-icon">🔬</div>
+                            <h3>Bioinformatics</h3>
+                            <p>Computational approaches to biological questions</p>
+                        </div>
+                        <div class="research-card">
+                            <div class="research-icon">🌿</div>
+                            <h3>Ecological Genetics</h3>
+                            <p>Conservation and ecological applications</p>
+                        </div>
+                    </div>
+                    
+                    <p>I have a very general interest in genomics and bioinformatics, with particular focus on ecological genetics. My work involves using cutting edge next-generation sequencing technologies and bioinformatics approaches to answer a broad range of biological questions.</p>
+                    
+                    <p>My previous roles have included research and training at the NEOF facility at The University of Sheffield, and roles involving the use of genomics and bioinformatics approaches for diet analysis in <em>A. mellifera</em>, and qPCR approaches to describe changes in the gut microbiome of <em>B. terrestris</em>. My PhD and role as a research associate at Manchester Metropolitan University involved various next-generation sequencing methods and applications in conservation and ecology.</p>
+                    
+                    <p>I also have experience as a research technician at The University of Manchester in both the soil ecology group and genomics core facility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section - SIMPLIFIED -->
+    <section id="publications" class="publications">
+        <div class="container">
+            <h2 class="section-title">Published Work</h2>
+            
+            <div class="year-section">
+                <h3 class="year-header">2025</h3>
+                
+                <div class="pub-item">
+                    <div class="pub-authors">George Day, Thomas Bolderstone, Greg J. Conway, Tony Cross, Tony Davis, Matilda Dolan, Mervyn Greening, Colin Neale, Ian Nicholson, Kim Nicholson, Ann Ward, Nik Ward, <span class="me">Graeme Fox</span>, Ewan Harney, Helen Hipperson, Kathryn Maher, Jamie Thompson, Rachel Tucker, Dean Waters, Kate L. Durrant, Terry Burke, Jon Slate, Kathryn E. Arnold</div>
+                    <div class="pub-title">The Genomic Signature of Demographic Decline in a Long-Distance Migrant in a Range-Extreme Population</div>
+                    <div class="pub-journal">Molecular Ecology e17805</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1111/mec.17805">🔗 DOI Link</a>
+                    </div>
+                </div>
+                
+                <div class="pub-item">
+                    <div class="pub-authors">Simon Deacon, Inswasti Cahyani, Nadine Holmes, <span class="me">Graeme Fox</span>, Rory Munro, Satrio Wibowo, Thomas Murray, Hannah Mason, Mark Housley, Daniel Martin, Abdi Sharif, Areeba Patel, Robert Goldspring, Sebastian Brandner, Felix Sahm, Stuart Smith, Simon Paine, Matthew Loose</div>
+                    <div class="pub-title">ROBIN: A unified nanopore-based assay integrating intraoperative methylome classification and next-day comprehensive profiling for ultra-rapid tumor diagnosis</div>
+                    <div class="pub-journal">Neuro-Oncology 2025;, noaf103</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1093/neuonc/noaf103">🔗 DOI Link</a>
+                        <a href="https://www.bbc.co.uk/news/articles/cpvkmkk4pv4o" class="press-item">📰 BBC News</a>
+                        <a href="https://www.theguardian.com/science/2025/may/21/brain-tumour-diagnosis-could-be-made-within-hours-say-researchers" class="press-item">📰 The Guardian</a>
+                    </div>
+                </div>
+                
+                <div class="pub-item">
+                    <div class="pub-authors">Nash, A., Lee, IN., <span class="me">Fox, G.</span> et al.</div>
+                    <div class="pub-title">An evaluation of spraying as a delivery method for human mesenchymal stem cells suspended in low-methyl pectin solutions</div>
+                    <div class="pub-journal">Stem Cell Res Ther 16, 246</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1186/s13287-025-04331-4">🔗 DOI Link</a>
+                    </div>
+                </div>
+                
+                <div class="pub-item">
+                    <div class="pub-authors">Patel, A., Göbel, K., Ille, S. et al.</div>
+                    <div class="pub-title">Prospective, multicenter validation of a platform for rapid molecular profiling of central nervous system tumors</div>
+                    <div class="pub-journal">Nature Medicine</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1038/s41591-025-03562-5">🔗 DOI Link</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="year-section">
+                <h3 class="year-header">2024</h3>
+                
+                <div class="pub-item">
+                    <div class="pub-authors">George Day, <span class="me">Graeme Fox</span>, Helen Hipperson, Kathryn H. Maher, Rachel Tucker, Gavin J. Horsburgh, Dean Waters, Kate L. Durant, Terry Burke, Jon Slate, Kathryn E. Arnold</div>
+                    <div class="pub-title">Revealing the Demographic History of the European Nightjar (<em>Caprimulgus europaeus</em>)</div>
+                    <div class="pub-journal">Ecology and Evolution. Volume 14, Issue 10 October 2024 e70460</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1002/ece3.70460">🔗 DOI Link</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="year-section">
+                <h3 class="year-header">2022</h3>
+                
+                <div class="pub-item">
+                    <div class="pub-authors"><span class="me">Graeme Fox</span>, Latha R. Vellaniparambil, Loreto Ros, Joshua Sammy, Richard F. Preziosi, Jennifer K. Rowntree</div>
+                    <div class="pub-title">Complex urban environments provide <em>Apis mellifera</em> with a richer plant forage than suburban and more rural landscapes</div>
+                    <div class="pub-journal">Ecology and Evolution. Volume 12, Issue 11 e9490</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1002/ece3.9490">🔗 DOI Link</a>
+                    </div>
+                </div>
+                
+                <div class="pub-item">
+                    <div class="pub-authors">Steven, W.J. Canty, John Paul Kennedy, <span class="me">Graeme Fox</span>, Kenan Matterson, Vanessa L. González, Mayra L. Núñez-Vallecillo, Richard F. Preziosi & Jennifer K. Rowntree</div>
+                    <div class="pub-title">Mangrove diversity is more than fringe deep</div>
+                    <div class="pub-journal">Scientific Reports 12, Article Number 1695 (2022)</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1038/s41598-022-05847-y">🔗 DOI Link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="year-section">
+                <h3 class="year-header">2021</h3>
+                
+                <div class="pub-item">
+                    <div class="pub-authors">Alex Williams, Holly Langridge, Angela L. Straathof, <span class="me">Graeme Fox</span>, Howbeer Muhammadali, Katherine A. Hollywood, Royston Goodacre & Franciska T. de Vries</div>
+                    <div class="pub-title">Comparing root exudate collection techniques: An improved hybrid method.</div>
+                    <div class="pub-journal">Soil Biology and Biochemistry. 161 (2021).</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1016/j.soilbio.2021.108391">🔗 DOI Link</a>
+                    </div>
+                </div>
+                
+                <div class="pub-item">
+                    <div class="pub-authors">Steven, W.J. Canty, <span class="me">Graeme Fox</span>, Jennifer K. Rowntree, Richard F. Preziosi</div>
+                    <div class="pub-title">Genetic structure of a remnant Acropora cervicornis population.</div>
+                    <div class="pub-journal">Scientific Reports. 11:3523 (2021)</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1038/s41598-021-83112-4">🔗 DOI Link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="year-section">
+                <h3 class="year-header">2020</h3>
+                
+                <div class="pub-item">
+                    <div class="pub-authors">Milena Benavides-Serrato, Yully Fernanda Contreras-Rueda, Lina M. Barrios-Gardelis, <span class="me">Graeme Fox</span>, Thomas D. Hughes, Néstor Hernando Campos-Campos, Richard F. Preziosi</div>
+                    <div class="pub-title">Isolation and characterization of 17 polymorphic microsatellite loci for a sea urchin (<i>Echinometra lucunter</i>: Echinometridae).</div>
+                    <div class="pub-journal">Rev. Acad. Colomb. Cienc. Ex. Fis. Nat. 44(172): 759-767 (2020).</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.18257/raccefyn.1113">🔗 DOI Link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="year-section">
+                <h3 class="year-header">2019</h3>
+                
+                <div class="pub-item">
+                    <div class="pub-authors"><span class="me">Graeme Fox</span>, Richard F. Preziosi, Rachael A. Antwis, Fraser J. Combe, W. Edwin Harris, Ian R. Hartley, Andrew C. Kitchener, Selvino R. de Kort, Anne-Isola Nekaris, Milena Benavides-Serrato, Jennifer K. Rowntree</div>
+                    <div class="pub-title">Multi-individual microsatellite identification: a multiple genome approach to microsatellite design (MiMi).</div>
+                    <div class="pub-journal">Molecular Ecology Resources (2019).</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1111/1755-0998.13065">🔗 DOI Link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="year-section">
+                <h3 class="year-header">2018</h3>
+                
+                <div class="pub-item">
+                    <div class="pub-authors"><span class="me">Graeme Fox</span>, Iulia Darolti, Jean-Denis Hibbitt, Richard F. Preziosi, John L. Fitzpatrick, Jennifer K. Rowntree</div>
+                    <div class="pub-title">Genetic assessment of ex situ populations to aid species conservation and maintain heterozygosity in non-model species.</div>
+                    <div class="pub-journal">Journal of Zoo and Aquarium Research: 6(2): 50-56. (2018)</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.19227/jzar.v6i2.299">🔗 DOI Link</a>
+                    </div>
+                </div>
+                
+                <div class="pub-item">
+                    <div class="pub-authors">Combe F, Taylor-Cox E, <span class="me">Fox G</span>, Sandri T, Davis N, Jones M, Cain B, Mallon D, Harris E</div>
+                    <div class="pub-title">Rapid isolation and characterization of microsatellites in the critically endangered Mountain Bongo <i>(Tragelaphus eurycerus isaaci)</i>.</div>
+                    <div class="pub-journal">Journal of Genetics. (2018)</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1007/s12041-018-0922-z">🔗 DOI Link</a>
+                    </div>
+                </div>
+                
+                <div class="pub-item">
+                    <div class="pub-authors">Rachael Antwis, Sarah Griffiths, Xavier Harrison, Ché Weldon, Michael Wood, Abigail Pretorius, Kevin Hopkins, <span class="me">Graeme Fox</span>, and Richard Preziosi</div>
+                    <div class="pub-title">Genetic Variability and Ontogeny Predict Microbiome Structure in a Disease-Challenged Montane Amphibian.</div>
+                    <div class="pub-journal">Multidisciplinary Journal of Microbial Ecology. (2018)</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1038/s41396-018-0167-0">🔗 DOI Link</a>
+                    </div>
+                </div>
+                
+                <div class="pub-item">
+                    <div class="pub-authors">D'Cruze N, Singh B, Mookerjee A, Hunter K, Brassey CA, Rowntree J, Megson S, <span class="me">Fox G</span>, Louies J, Sharath RS Macdonald DW</div>
+                    <div class="pub-title">What's in a name? Wildlife traders evade authorities using code words.</div>
+                    <div class="pub-journal">Oryx: 52(1). 13-15 (2018)</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1017/S0030605317001788">🔗 DOI Link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="year-section">
+                <h3 class="year-header">2017</h3>
+                
+                <div class="pub-item">
+                    <div class="pub-authors">Ramirez K, Knight C, ... and de Vries F</div>
+                    <div class="pub-title">Detecting macroecological patterns in bacterial communities across independent studies of global soils.</div>
+                    <div class="pub-journal">Nature Microbiology. (2017).</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1038/s41564-017-0062-x">🔗 DOI Link</a>
+                    </div>
+                </div>
+                
+                <div class="pub-item">
+                    <div class="pub-authors">Madhura Castelino, Stephen Eyre, John Moat, <span class="me">Graeme Fox</span>, Paul Martin, Pauline Ho, Mathew Upton & Anne Barton</div>
+                    <div class="pub-title">Optimisation of methods for bacterial skin microbiome investigation: primer selection and comparison of the 454 versus MiSeq platform</div>
+                    <div class="pub-journal">BMC Microbiology 7. Article Number 23. (2017).</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1186/s12866-017-0927-4">🔗 DOI Link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="year-section">
+                <h3 class="year-header">2016</h3>
+                
+                <div class="pub-item">
+                    <div class="pub-authors">Griffiths SM, <span class="me">Fox G</span>, Briggs PJ, Donaldson IJ, Hood S, Richardson P, Leaver GW, Truelove NK & Preziosi RF</div>
+                    <div class="pub-title">A Galaxy-based bioinformatics pipeline for optimised, streamlined microsatellite development from Illumina next-generation sequencing data.</div>
+                    <div class="pub-journal">Conservation Genetics Resources. (2016).</div>
+                    <div class="pub-links">
+                        <a href="https://link.springer.com/article/10.1007/s12686-016-0570-7">🔗 DOI Link</a>
+                    </div>
+                </div>
+                
+                <div class="pub-item">
+                    <div class="pub-authors">Moat J, Rizoulis A, <span class="me">Fox G</span> & Upton M</div>
+                    <div class="pub-title">Domestic shower hose biofilms contain fungal species capable of causing opportunistic infection.</div>
+                    <div class="pub-journal">Journal of Water and Health:14(4) (2016).</div>
+                    <div class="pub-links">
+                        <a href="https://iwaponline.com/jwh/article/14/5/727/28021/Domestic-shower-hose-biofilms-contain-fungal">🔗 DOI Link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="year-section">
+                <h3 class="year-header">2015</h3>
+                
+                <div class="pub-item">
+                    <div class="pub-authors">Langarica-Fuentes A, <span class="me">Fox G</span>, Robson GD</div>
+                    <div class="pub-title">Metabarcoding analysis of home composts reveals distinctive fungal communities with a high number of unassigned sequences.</div>
+                    <div class="pub-journal">Microbiology (2015).</div>
+                    <div class="pub-links">
+                        <a href="https://www.microbiologyresearch.org/content/journal/micro/10.1099/mic.0.000153">🔗 DOI Link</a>
+                    </div>
+                </div>
+                
+                <div class="pub-item">
+                    <div class="pub-authors">Dr Madhura Castelino, MBBS, Stephen Eyre, PhD, John Moat, MSc, <span class="me">Graeme Fox</span>, MSc, Paul Martin, MPhil, Umer Ijaz, PhD, Christopher Quince, PhD, Pauline Ho, PhD, Mathew Upton, PhD, Anne Barton, PhD</div>
+                    <div class="pub-title">The skin microbiome in psoriatic arthritis: methodology development and pilot data.</div>
+                    <div class="pub-journal">The Lancet: 385(1): S27 (2015).</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1016/S0140-6736(15)60342-7">🔗 DOI Link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="year-section">
+                <h3 class="year-header">2014</h3>
+                
+                <div class="pub-item">
+                    <div class="pub-authors">Adrian Langarica-Fuentes, Pauline S Handley PhD, Ashley Houlden PhD, <span class="me">Graeme Fox</span>, Geoffrey D Robson PhD</div>
+                    <div class="pub-title">An investigation of the biodiversity of thermophilic and thermotolerant fungal species in composts using culture-based and molecular techniques.</div>
+                    <div class="pub-journal">Fungal Ecology: 11. 132-144. Elsevier. (2014).</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1016/j.funeco.2014.05.007">🔗 DOI Link</a>
+                    </div>
+                </div>
+                
+                <div class="pub-item">
+                    <div class="pub-authors">Langarica-Fuentes, Adrian; Zafar, Urooj; Heyworth, Alan; Brown, Thomas; <span class="me">Fox, Graeme</span>; Robson, Geoff.</div>
+                    <div class="pub-title">Fungal succession in an in-vessel composting system characterised using DGGE and 454-pyrosequencing.</div>
+                    <div class="pub-journal">FEMS Microbiology Ecology:88. 296-308 (2014).</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1111/1574-6941.12293">🔗 DOI Link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="year-section">
+                <h3 class="year-header">2013</h3>
+                
+                <div class="pub-item">
+                    <div class="pub-authors">David Penney PhD, Caroline Wadsworth; <span class="me">Graeme Fox</span>; Sandra L Kennedy; Richard F Preziosi; Terence A Brown.</div>
+                    <div class="pub-title">Absence of Ancient DNA in Sub-Fossil Insect Inclusions Preserved in 'Anthropocene' Colombian Copal.</div>
+                    <div class="pub-journal">PLOSONE: 8(9):e73150. (2013).</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1371/journal.pone.0073150">🔗 DOI Link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <h2 class="section-title">Achievements</h2>
+            
+            <div class="achievement-categories">
+                <div class="achievement-category">
+                    <div class="achievement-icon grants">💰</div>
+                    <h3>Grants</h3>
+                </div>
+                <div class="achievement-category">
+                    <div class="achievement-icon awards">🏆</div>
+                    <h3>Awards</h3>
+                </div>
+                <div class="achievement-category">
+                    <div class="achievement-icon conferences">🎤</div>
+                    <h3>Conferences</h3>
+                </div>
+                <div class="achievement-category">
+                    <div class="achievement-icon media">📰</div>
+                    <h3>Media</h3>
+                </div>
+            </div>
+            
+            <div class="achievement-sections">
+                <div>
+                    <h3>💰 Grants Awarded</h3>
+                    <div class="achievement-item">
+                        <p><strong>November 2020</strong> - Awarded a grant from the <a href="https://www.evacranetrust.org/">Eva Crane Trust</a> for the project: "Healthy diet, healthy guts, healthy bees."</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3>🏆 Awards</h3>
+                    <div class="achievement-item awards">
+                        <p><strong>February 2020</strong> - Post-Graduate Research Paper Award <strong>(1st place)</strong> – Ecology and Environment Research Centre, Manchester Metropolitan University.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 3rem;">
+                <h3>🎤 Conference Talks & Posters</h3>
+                <div class="achievement-item conferences">
+                    <p><strong>December 2020</strong> - British Ecological Society Annual Meeting 2020: Talk titled "A Hive of Activity – GIS and DNA sequencing reveal the effect urban spaces have on bee diet"</p>
+                </div>
+                <div class="achievement-item conferences">
+                    <p><strong>December 2019</strong> - British Ecological Society Annual Meeting 2019: Talk titled "Why you should be using multiple genomes when developing new microsatellite markers. A new tool for a multiple genome approach to microsatellite design (MiMi)."</p>
+                </div>
+                <div class="achievement-item conferences">
+                    <p><strong>December 2016</strong> - British Ecological Society Annual Meeting 2016: Poster titled "<em>Ex situ</em> conservation of the endangered undulate ray (<em>Raja undulata</em>)."</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 3rem;">
+                <h3>📰 Work In The Press</h3>
+                <div class="achievement-item media">
+                    <p>Some work the department performed on trade in 'hatha jodi': a root believed to bring good luck in some cultures. Trade in the plant has been fuelling illicit trade in animal parts.</p>
+                    <div class="media-links">
+                        <a href="https://gizmodo.com/if-you-ordered-a-rare-indian-root-online-its-probably-1796245321">Gizmodo</a>
+                        <a href="https://www.telegraph.co.uk/news/2017/06/20/lizard-penis-passed-lucky-plant-wide-ranging-scam/">The Telegraph</a>
+                        <a href="http://www.bbc.co.uk/news/world-asia-india-40323340">BBC</a>
+                    </div>
+                </div>
+                <div class="achievement-item media">
+                    <p>My work on captive populations of <em>Raja undulata</em> has been featured on <a href="http://www.bbc.co.uk/earth/story/20141112-ray-dna-mapped-to-stop-inbreeding">BBC Earth</a> and Manchester University News.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p>📧 <a href="mailto:graeme.fox@nottingham.ac.uk">graeme.fox@nottingham.ac.uk</a></p>
+                    <p>📧 <a href="mailto:graeme.fox87@gmail.com">graeme.fox87@gmail.com (personal)</a></p>
+                    <p>📍 DeepSEQ<br>The University of Nottingham</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Research Focus</h3>
+                    <ul>
+                        <li>• Genomics & Bioinformatics</li>
+                        <li>• Ecological Genetics</li>
+                        <li>• Next-Generation Sequencing</li>
+                        <li>• Conservation Biology</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Qualifications</h3>
+                    <p>🎓 PhD - Manchester Metropolitan University</p>
+                    <p>🎓 MSc & BSc (Hons) - University of Liverpool</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 Graeme Fox.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Simple fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animation
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
