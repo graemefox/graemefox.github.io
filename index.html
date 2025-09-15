@@ -235,90 +235,56 @@
         
         /* Publications Section - SIMPLIFIED */
         .publications {
-            background: #f9fafb;
-        }
-        
-        .year-section {
-            margin-bottom: 3rem;
+            background: white;
         }
         
         .year-header {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #1e40af;
-            border-bottom: 2px solid #bfdbfe;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            margin: 2rem 0 1rem 0;
         }
         
         .pub-item {
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #e5e7eb;
-        }
-        
-        .pub-item:last-child {
-            border-bottom: none;
-        }
+            margin-bottom: 1.5rem;
         }
         
         .pub-authors {
-            color: #6b7280;
+            color: #666;
             font-size: 0.9rem;
-            margin-bottom: 0.75rem;
-            line-height: 1.5;
+            margin-bottom: 0.5rem;
         }
         
         .pub-authors .me {
-            color: #1e40af;
             font-weight: 600;
         }
         
         .pub-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #1f2937;
-            margin-bottom: 0.5rem;
-            line-height: 1.3;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 0.25rem;
         }
         
         .pub-journal {
-            color: #1e40af;
             font-style: italic;
-            font-size: 0.95rem;
-            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            color: #555;
         }
         
         .pub-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            align-items: center;
+            font-size: 0.85rem;
         }
         
         .pub-links a {
             color: #1e40af;
             text-decoration: none;
-            font-size: 0.85rem;
-            padding: 0.25rem 0.5rem;
-            border: 1px solid #bfdbfe;
-            border-radius: 6px;
-            transition: all 0.2s ease;
+            margin-right: 1rem;
         }
         
         .pub-links a:hover {
-            background: #1e40af;
-            color: white;
-        }
-        
-        .press-item {
-            color: #d97706;
-            border-color: #fde68a;
-        }
-        
-        .press-item:hover {
-            background: #d97706;
-            color: white;
+            text-decoration: underline;
         }
         
         /* Achievements Section */
@@ -530,9 +496,10 @@
                 padding-right: 1rem;
             }
             
-            .pub-links {
-                flex-direction: column;
-                align-items: flex-start;
+            .pub-links a {
+                display: block;
+                margin-bottom: 0.5rem;
+                margin-right: 0;
             }
 
             /* Ensure research cards have proper minimum width on mobile */
@@ -655,269 +622,245 @@
         <div class="container">
             <h2 class="section-title">Published Work</h2>
             
-            <div class="year-section">
-                <h3 class="year-header">2025</h3>
-                
-                <div class="pub-item">
-                    <div class="pub-authors">George Day, Thomas Bolderstone, Greg J. Conway, Tony Cross, Tony Davis, Matilda Dolan, Mervyn Greening, Colin Neale, Ian Nicholson, Kim Nicholson, Ann Ward, Nik Ward, <span class="me">Graeme Fox</span>, Ewan Harney, Helen Hipperson, Kathryn Maher, Jamie Thompson, Rachel Tucker, Dean Waters, Kate L. Durrant, Terry Burke, Jon Slate, Kathryn E. Arnold</div>
-                    <div class="pub-title">The Genomic Signature of Demographic Decline in a Long-Distance Migrant in a Range-Extreme Population</div>
-                    <div class="pub-journal">Molecular Ecology e17805</div>
-                    <div class="pub-links">
-                        <a href="https://doi.org/10.1111/mec.17805">🔗 DOI Link</a>
-                    </div>
-                </div>
-                
-                <div class="pub-item">
-                    <div class="pub-authors">Simon Deacon, Inswasti Cahyani, Nadine Holmes, <span class="me">Graeme Fox</span>, Rory Munro, Satrio Wibowo, Thomas Murray, Hannah Mason, Mark Housley, Daniel Martin, Abdi Sharif, Areeba Patel, Robert Goldspring, Sebastian Brandner, Felix Sahm, Stuart Smith, Simon Paine, Matthew Loose</div>
-                    <div class="pub-title">ROBIN: A unified nanopore-based assay integrating intraoperative methylome classification and next-day comprehensive profiling for ultra-rapid tumor diagnosis</div>
-                    <div class="pub-journal">Neuro-Oncology 2025;, noaf103</div>
-                    <div class="pub-links">
-                        <a href="https://doi.org/10.1093/neuonc/noaf103">🔗 DOI Link</a>
-                        <a href="https://www.bbc.co.uk/news/articles/cpvkmkk4pv4o" class="press-item">📰 BBC News</a>
-                        <a href="https://www.theguardian.com/science/2025/may/21/brain-tumour-diagnosis-could-be-made-within-hours-say-researchers" class="press-item">📰 The Guardian</a>
-                    </div>
-                </div>
-                
-                <div class="pub-item">
-                    <div class="pub-authors">Nash, A., Lee, IN., <span class="me">Fox, G.</span> et al.</div>
-                    <div class="pub-title">An evaluation of spraying as a delivery method for human mesenchymal stem cells suspended in low-methyl pectin solutions</div>
-                    <div class="pub-journal">Stem Cell Res Ther 16, 246</div>
-                    <div class="pub-links">
-                        <a href="https://doi.org/10.1186/s13287-025-04331-4">🔗 DOI Link</a>
-                    </div>
-                </div>
-                
-                <div class="pub-item">
-                    <div class="pub-authors">Patel, A., Göbel, K., Ille, S. et al.</div>
-                    <div class="pub-title">Prospective, multicenter validation of a platform for rapid molecular profiling of central nervous system tumors</div>
-                    <div class="pub-journal">Nature Medicine</div>
-                    <div class="pub-links">
-                        <a href="https://doi.org/10.1038/s41591-025-03562-5">🔗 DOI Link</a>
-                    </div>
+            <h3 class="year-header">2025</h3>
+            
+            <div class="pub-item">
+                <div class="pub-authors">George Day, Thomas Bolderstone, Greg J. Conway, Tony Cross, Tony Davis, Matilda Dolan, Mervyn Greening, Colin Neale, Ian Nicholson, Kim Nicholson, Ann Ward, Nik Ward, <span class="me">Graeme Fox</span>, Ewan Harney, Helen Hipperson, Kathryn Maher, Jamie Thompson, Rachel Tucker, Dean Waters, Kate L. Durrant, Terry Burke, Jon Slate, Kathryn E. Arnold</div>
+                <div class="pub-title">The Genomic Signature of Demographic Decline in a Long-Distance Migrant in a Range-Extreme Population</div>
+                <div class="pub-journal">Molecular Ecology e17805</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1111/mec.17805">DOI Link</a>
                 </div>
             </div>
             
-            <div class="year-section">
-                <h3 class="year-header">2024</h3>
-                
-                <div class="pub-item">
-                    <div class="pub-authors">George Day, <span class="me">Graeme Fox</span>, Helen Hipperson, Kathryn H. Maher, Rachel Tucker, Gavin J. Horsburgh, Dean Waters, Kate L. Durant, Terry Burke, Jon Slate, Kathryn E. Arnold</div>
-                    <div class="pub-title">Revealing the Demographic History of the European Nightjar (<em>Caprimulgus europaeus</em>)</div>
-                    <div class="pub-journal">Ecology and Evolution. Volume 14, Issue 10 October 2024 e70460</div>
-                    <div class="pub-links">
-                        <a href="https://doi.org/10.1002/ece3.70460">🔗 DOI Link</a>
-                    </div>
+            <div class="pub-item">
+                <div class="pub-authors">Simon Deacon, Inswasti Cahyani, Nadine Holmes, <span class="me">Graeme Fox</span>, Rory Munro, Satrio Wibowo, Thomas Murray, Hannah Mason, Mark Housley, Daniel Martin, Abdi Sharif, Areeba Patel, Robert Goldspring, Sebastian Brandner, Felix Sahm, Stuart Smith, Simon Paine, Matthew Loose</div>
+                <div class="pub-title">ROBIN: A unified nanopore-based assay integrating intraoperative methylome classification and next-day comprehensive profiling for ultra-rapid tumor diagnosis</div>
+                <div class="pub-journal">Neuro-Oncology 2025;, noaf103</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1093/neuonc/noaf103">DOI Link</a>
+                    <a href="https://www.bbc.co.uk/news/articles/cpvkmkk4pv4o">BBC News</a>
+                    <a href="https://www.theguardian.com/science/2025/may/21/brain-tumour-diagnosis-could-be-made-within-hours-say-researchers">The Guardian</a>
                 </div>
             </div>
             
-            <div class="year-section">
-                <h3 class="year-header">2022</h3>
-                
-                <div class="pub-item">
-                    <div class="pub-authors"><span class="me">Graeme Fox</span>, Latha R. Vellaniparambil, Loreto Ros, Joshua Sammy, Richard F. Preziosi, Jennifer K. Rowntree</div>
-                    <div class="pub-title">Complex urban environments provide <em>Apis mellifera</em> with a richer plant forage than suburban and more rural landscapes</div>
-                    <div class="pub-journal">Ecology and Evolution. Volume 12, Issue 11 e9490</div>
-                    <div class="pub-links">
-                        <a href="https://doi.org/10.1002/ece3.9490">🔗 DOI Link</a>
-                    </div>
+            <div class="pub-item">
+                <div class="pub-authors">Nash, A., Lee, IN., <span class="me">Fox, G.</span> et al.</div>
+                <div class="pub-title">An evaluation of spraying as a delivery method for human mesenchymal stem cells suspended in low-methyl pectin solutions</div>
+                <div class="pub-journal">Stem Cell Res Ther 16, 246</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1186/s13287-025-04331-4">DOI Link</a>
                 </div>
-                
-                <div class="pub-item">
-                    <div class="pub-authors">Steven, W.J. Canty, John Paul Kennedy, <span class="me">Graeme Fox</span>, Kenan Matterson, Vanessa L. González, Mayra L. Núñez-Vallecillo, Richard F. Preziosi & Jennifer K. Rowntree</div>
-                    <div class="pub-title">Mangrove diversity is more than fringe deep</div>
-                    <div class="pub-journal">Scientific Reports 12, Article Number 1695 (2022)</div>
-                    <div class="pub-links">
-                        <a href="https://doi.org/10.1038/s41598-022-05847-y">🔗 DOI Link</a>
-                    </div>
+            </div>
+            
+            <div class="pub-item">
+                <div class="pub-authors">Patel, A., Göbel, K., Ille, S. et al.</div>
+                <div class="pub-title">Prospective, multicenter validation of a platform for rapid molecular profiling of central nervous system tumors</div>
+                <div class="pub-journal">Nature Medicine</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1038/s41591-025-03562-5">DOI Link</a>
+                </div>
+            </div>
+            
+            <h3 class="year-header">2024</h3>
+            
+            <div class="pub-item">
+                <div class="pub-authors">George Day, <span class="me">Graeme Fox</span>, Helen Hipperson, Kathryn H. Maher, Rachel Tucker, Gavin J. Horsburgh, Dean Waters, Kate L. Durant, Terry Burke, Jon Slate, Kathryn E. Arnold</div>
+                <div class="pub-title">Revealing the Demographic History of the European Nightjar (<em>Caprimulgus europaeus</em>)</div>
+                <div class="pub-journal">Ecology and Evolution. Volume 14, Issue 10 October 2024 e70460</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1002/ece3.70460">DOI Link</a>
+                </div>
+            </div>
+            
+            <h3 class="year-header">2022</h3>
+            
+            <div class="pub-item">
+                <div class="pub-authors"><span class="me">Graeme Fox</span>, Latha R. Vellaniparambil, Loreto Ros, Joshua Sammy, Richard F. Preziosi, Jennifer K. Rowntree</div>
+                <div class="pub-title">Complex urban environments provide <em>Apis mellifera</em> with a richer plant forage than suburban and more rural landscapes</div>
+                <div class="pub-journal">Ecology and Evolution. Volume 12, Issue 11 e9490</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1002/ece3.9490">DOI Link</a>
+                </div>
+            </div>
+            
+            <div class="pub-item">
+                <div class="pub-authors">Steven, W.J. Canty, John Paul Kennedy, <span class="me">Graeme Fox</span>, Kenan Matterson, Vanessa L. González, Mayra L. Núñez-Vallecillo, Richard F. Preziosi & Jennifer K. Rowntree</div>
+                <div class="pub-title">Mangrove diversity is more than fringe deep</div>
+                <div class="pub-journal">Scientific Reports 12, Article Number 1695 (2022)</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1038/s41598-022-05847-y">DOI Link</a>
                 </div>
             </div>
 
-            <div class="year-section">
-                <h3 class="year-header">2021</h3>
-                
-                <div class="pub-item">
-                    <div class="pub-authors">Alex Williams, Holly Langridge, Angela L. Straathof, <span class="me">Graeme Fox</span>, Howbeer Muhammadali, Katherine A. Hollywood, Royston Goodacre & Franciska T. de Vries</div>
-                    <div class="pub-title">Comparing root exudate collection techniques: An improved hybrid method.</div>
-                    <div class="pub-journal">Soil Biology and Biochemistry. 161 (2021).</div>
-                    <div class="pub-links">
-                        <a href="https://doi.org/10.1016/j.soilbio.2021.108391">🔗 DOI Link</a>
-                    </div>
+            <h3 class="year-header">2021</h3>
+            
+            <div class="pub-item">
+                <div class="pub-authors">Alex Williams, Holly Langridge, Angela L. Straathof, <span class="me">Graeme Fox</span>, Howbeer Muhammadali, Katherine A. Hollywood, Royston Goodacre & Franciska T. de Vries</div>
+                <div class="pub-title">Comparing root exudate collection techniques: An improved hybrid method.</div>
+                <div class="pub-journal">Soil Biology and Biochemistry. 161 (2021).</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1016/j.soilbio.2021.108391">DOI Link</a>
                 </div>
-                
-                <div class="pub-item">
-                    <div class="pub-authors">Steven, W.J. Canty, <span class="me">Graeme Fox</span>, Jennifer K. Rowntree, Richard F. Preziosi</div>
-                    <div class="pub-title">Genetic structure of a remnant Acropora cervicornis population.</div>
-                    <div class="pub-journal">Scientific Reports. 11:3523 (2021)</div>
-                    <div class="pub-links">
-                        <a href="https://doi.org/10.1038/s41598-021-83112-4">🔗 DOI Link</a>
-                    </div>
+            </div>
+            
+            <div class="pub-item">
+                <div class="pub-authors">Steven, W.J. Canty, <span class="me">Graeme Fox</span>, Jennifer K. Rowntree, Richard F. Preziosi</div>
+                <div class="pub-title">Genetic structure of a remnant Acropora cervicornis population.</div>
+                <div class="pub-journal">Scientific Reports. 11:3523 (2021)</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1038/s41598-021-83112-4">DOI Link</a>
                 </div>
             </div>
 
-            <div class="year-section">
-                <h3 class="year-header">2020</h3>
-                
-                <div class="pub-item">
-                    <div class="pub-authors">Milena Benavides-Serrato, Yully Fernanda Contreras-Rueda, Lina M. Barrios-Gardelis, <span class="me">Graeme Fox</span>, Thomas D. Hughes, Néstor Hernando Campos-Campos, Richard F. Preziosi</div>
-                    <div class="pub-title">Isolation and characterization of 17 polymorphic microsatellite loci for a sea urchin (<i>Echinometra lucunter</i>: Echinometridae).</div>
-                    <div class="pub-journal">Rev. Acad. Colomb. Cienc. Ex. Fis. Nat. 44(172): 759-767 (2020).</div>
-                    <div class="pub-links">
-                        <a href="https://doi.org/10.18257/raccefyn.1113">🔗 DOI Link</a>
-                    </div>
+            <h3 class="year-header">2020</h3>
+            
+            <div class="pub-item">
+                <div class="pub-authors">Milena Benavides-Serrato, Yully Fernanda Contreras-Rueda, Lina M. Barrios-Gardelis, <span class="me">Graeme Fox</span>, Thomas D. Hughes, Néstor Hernando Campos-Campos, Richard F. Preziosi</div>
+                <div class="pub-title">Isolation and characterization of 17 polymorphic microsatellite loci for a sea urchin (<i>Echinometra lucunter</i>: Echinometridae).</div>
+                <div class="pub-journal">Rev. Acad. Colomb. Cienc. Ex. Fis. Nat. 44(172): 759-767 (2020).</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.18257/raccefyn.1113">DOI Link</a>
                 </div>
             </div>
 
-            <div class="year-section">
-                <h3 class="year-header">2019</h3>
-                
-                <div class="pub-item">
-                    <div class="pub-authors"><span class="me">Graeme Fox</span>, Richard F. Preziosi, Rachael A. Antwis, Fraser J. Combe, W. Edwin Harris, Ian R. Hartley, Andrew C. Kitchener, Selvino R. de Kort, Anne-Isola Nekaris, Milena Benavides-Serrato, Jennifer K. Rowntree</div>
-                    <div class="pub-title">Multi-individual microsatellite identification: a multiple genome approach to microsatellite design (MiMi).</div>
-                    <div class="pub-journal">Molecular Ecology Resources (2019).</div>
-                    <div class="pub-links">
-                        <a href="https://doi.org/10.1111/1755-0998.13065">🔗 DOI Link</a>
-                    </div>
+            <h3 class="year-header">2019</h3>
+            
+            <div class="pub-item">
+                <div class="pub-authors"><span class="me">Graeme Fox</span>, Richard F. Preziosi, Rachael A. Antwis, Fraser J. Combe, W. Edwin Harris, Ian R. Hartley, Andrew C. Kitchener, Selvino R. de Kort, Anne-Isola Nekaris, Milena Benavides-Serrato, Jennifer K. Rowntree</div>
+                <div class="pub-title">Multi-individual microsatellite identification: a multiple genome approach to microsatellite design (MiMi).</div>
+                <div class="pub-journal">Molecular Ecology Resources (2019).</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1111/1755-0998.13065">DOI Link</a>
                 </div>
             </div>
 
-            <div class="year-section">
-                <h3 class="year-header">2018</h3>
-                
-                <div class="pub-item">
-                    <div class="pub-authors"><span class="me">Graeme Fox</span>, Iulia Darolti, Jean-Denis Hibbitt, Richard F. Preziosi, John L. Fitzpatrick, Jennifer K. Rowntree</div>
-                    <div class="pub-title">Genetic assessment of ex situ populations to aid species conservation and maintain heterozygosity in non-model species.</div>
-                    <div class="pub-journal">Journal of Zoo and Aquarium Research: 6(2): 50-56. (2018)</div>
-                    <div class="pub-links">
-                        <a href="https://doi.org/10.19227/jzar.v6i2.299">🔗 DOI Link</a>
-                    </div>
+            <h3 class="year-header">2018</h3>
+            
+            <div class="pub-item">
+                <div class="pub-authors"><span class="me">Graeme Fox</span>, Iulia Darolti, Jean-Denis Hibbitt, Richard F. Preziosi, John L. Fitzpatrick, Jennifer K. Rowntree</div>
+                <div class="pub-title">Genetic assessment of ex situ populations to aid species conservation and maintain heterozygosity in non-model species.</div>
+                <div class="pub-journal">Journal of Zoo and Aquarium Research: 6(2): 50-56. (2018)</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.19227/jzar.v6i2.299">DOI Link</a>
                 </div>
-                
-                <div class="pub-item">
-                    <div class="pub-authors">Combe F, Taylor-Cox E, <span class="me">Fox G</span>, Sandri T, Davis N, Jones M, Cain B, Mallon D, Harris E</div>
-                    <div class="pub-title">Rapid isolation and characterization of microsatellites in the critically endangered Mountain Bongo <i>(Tragelaphus eurycerus isaaci)</i>.</div>
-                    <div class="pub-journal">Journal of Genetics. (2018)</div>
-                    <div class="pub-links">
-                        <a href="https://doi.org/10.1007/s12041-018-0922-z">🔗 DOI Link</a>
-                    </div>
+            </div>
+            
+            <div class="pub-item">
+                <div class="pub-authors">Combe F, Taylor-Cox E, <span class="me">Fox G</span>, Sandri T, Davis N, Jones M, Cain B, Mallon D, Harris E</div>
+                <div class="pub-title">Rapid isolation and characterization of microsatellites in the critically endangered Mountain Bongo <i>(Tragelaphus eurycerus isaaci)</i>.</div>
+                <div class="pub-journal">Journal of Genetics. (2018)</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1007/s12041-018-0922-z">DOI Link</a>
                 </div>
-                
-                <div class="pub-item">
-                    <div class="pub-authors">Rachael Antwis, Sarah Griffiths, Xavier Harrison, Ché Weldon, Michael Wood, Abigail Pretorius, Kevin Hopkins, <span class="me">Graeme Fox</span>, and Richard Preziosi</div>
-                    <div class="pub-title">Genetic Variability and Ontogeny Predict Microbiome Structure in a Disease-Challenged Montane Amphibian.</div>
-                    <div class="pub-journal">Multidisciplinary Journal of Microbial Ecology. (2018)</div>
-                    <div class="pub-links">
-                        <a href="https://doi.org/10.1038/s41396-018-0167-0">🔗 DOI Link</a>
-                    </div>
+            </div>
+            
+            <div class="pub-item">
+                <div class="pub-authors">Rachael Antwis, Sarah Griffiths, Xavier Harrison, Ché Weldon, Michael Wood, Abigail Pretorius, Kevin Hopkins, <span class="me">Graeme Fox</span>, and Richard Preziosi</div>
+                <div class="pub-title">Genetic Variability and Ontogeny Predict Microbiome Structure in a Disease-Challenged Montane Amphibian.</div>
+                <div class="pub-journal">Multidisciplinary Journal of Microbial Ecology. (2018)</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1038/s41396-018-0167-0">DOI Link</a>
                 </div>
-                
-                <div class="pub-item">
-                    <div class="pub-authors">D'Cruze N, Singh B, Mookerjee A, Hunter K, Brassey CA, Rowntree J, Megson S, <span class="me">Fox G</span>, Louies J, Sharath RS Macdonald DW</div>
-                    <div class="pub-title">What's in a name? Wildlife traders evade authorities using code words.</div>
-                    <div class="pub-journal">Oryx: 52(1). 13-15 (2018)</div>
-                    <div class="pub-links">
-                        <a href="https://doi.org/10.1017/S0030605317001788">🔗 DOI Link</a>
-                    </div>
+            </div>
+            
+            <div class="pub-item">
+                <div class="pub-authors">D'Cruze N, Singh B, Mookerjee A, Hunter K, Brassey CA, Rowntree J, Megson S, <span class="me">Fox G</span>, Louies J, Sharath RS Macdonald DW</div>
+                <div class="pub-title">What's in a name? Wildlife traders evade authorities using code words.</div>
+                <div class="pub-journal">Oryx: 52(1). 13-15 (2018)</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1017/S0030605317001788">DOI Link</a>
                 </div>
             </div>
 
-            <div class="year-section">
-                <h3 class="year-header">2017</h3>
-                
-                <div class="pub-item">
-                    <div class="pub-authors">Ramirez K, Knight C, ... and de Vries F</div>
-                    <div class="pub-title">Detecting macroecological patterns in bacterial communities across independent studies of global soils.</div>
-                    <div class="pub-journal">Nature Microbiology. (2017).</div>
-                    <div class="pub-links">
-                        <a href="https://doi.org/10.1038/s41564-017-0062-x">🔗 DOI Link</a>
-                    </div>
+            <h3 class="year-header">2017</h3>
+            
+            <div class="pub-item">
+                <div class="pub-authors">Ramirez K, Knight C, ... and de Vries F</div>
+                <div class="pub-title">Detecting macroecological patterns in bacterial communities across independent studies of global soils.</div>
+                <div class="pub-journal">Nature Microbiology. (2017).</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1038/s41564-017-0062-x">DOI Link</a>
                 </div>
-                
-                <div class="pub-item">
-                    <div class="pub-authors">Madhura Castelino, Stephen Eyre, John Moat, <span class="me">Graeme Fox</span>, Paul Martin, Pauline Ho, Mathew Upton & Anne Barton</div>
-                    <div class="pub-title">Optimisation of methods for bacterial skin microbiome investigation: primer selection and comparison of the 454 versus MiSeq platform</div>
-                    <div class="pub-journal">BMC Microbiology 7. Article Number 23. (2017).</div>
-                    <div class="pub-links">
-                        <a href="https://doi.org/10.1186/s12866-017-0927-4">🔗 DOI Link</a>
-                    </div>
+            </div>
+            
+            <div class="pub-item">
+                <div class="pub-authors">Madhura Castelino, Stephen Eyre, John Moat, <span class="me">Graeme Fox</span>, Paul Martin, Pauline Ho, Mathew Upton & Anne Barton</div>
+                <div class="pub-title">Optimisation of methods for bacterial skin microbiome investigation: primer selection and comparison of the 454 versus MiSeq platform</div>
+                <div class="pub-journal">BMC Microbiology 7. Article Number 23. (2017).</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1186/s12866-017-0927-4">DOI Link</a>
                 </div>
             </div>
 
-            <div class="year-section">
-                <h3 class="year-header">2016</h3>
-                
-                <div class="pub-item">
-                    <div class="pub-authors">Griffiths SM, <span class="me">Fox G</span>, Briggs PJ, Donaldson IJ, Hood S, Richardson P, Leaver GW, Truelove NK & Preziosi RF</div>
-                    <div class="pub-title">A Galaxy-based bioinformatics pipeline for optimised, streamlined microsatellite development from Illumina next-generation sequencing data.</div>
-                    <div class="pub-journal">Conservation Genetics Resources. (2016).</div>
-                    <div class="pub-links">
-                        <a href="https://link.springer.com/article/10.1007/s12686-016-0570-7">🔗 DOI Link</a>
-                    </div>
+            <h3 class="year-header">2016</h3>
+            
+            <div class="pub-item">
+                <div class="pub-authors">Griffiths SM, <span class="me">Fox G</span>, Briggs PJ, Donaldson IJ, Hood S, Richardson P, Leaver GW, Truelove NK & Preziosi RF</div>
+                <div class="pub-title">A Galaxy-based bioinformatics pipeline for optimised, streamlined microsatellite development from Illumina next-generation sequencing data.</div>
+                <div class="pub-journal">Conservation Genetics Resources. (2016).</div>
+                <div class="pub-links">
+                    <a href="https://link.springer.com/article/10.1007/s12686-016-0570-7">DOI Link</a>
                 </div>
-                
-                <div class="pub-item">
-                    <div class="pub-authors">Moat J, Rizoulis A, <span class="me">Fox G</span> & Upton M</div>
-                    <div class="pub-title">Domestic shower hose biofilms contain fungal species capable of causing opportunistic infection.</div>
-                    <div class="pub-journal">Journal of Water and Health:14(4) (2016).</div>
-                    <div class="pub-links">
-                        <a href="https://iwaponline.com/jwh/article/14/5/727/28021/Domestic-shower-hose-biofilms-contain-fungal">🔗 DOI Link</a>
-                    </div>
+            </div>
+            
+            <div class="pub-item">
+                <div class="pub-authors">Moat J, Rizoulis A, <span class="me">Fox G</span> & Upton M</div>
+                <div class="pub-title">Domestic shower hose biofilms contain fungal species capable of causing opportunistic infection.</div>
+                <div class="pub-journal">Journal of Water and Health:14(4) (2016).</div>
+                <div class="pub-links">
+                    <a href="https://iwaponline.com/jwh/article/14/5/727/28021/Domestic-shower-hose-biofilms-contain-fungal">DOI Link</a>
                 </div>
             </div>
 
-            <div class="year-section">
-                <h3 class="year-header">2015</h3>
-                
-                <div class="pub-item">
-                    <div class="pub-authors">Langarica-Fuentes A, <span class="me">Fox G</span>, Robson GD</div>
-                    <div class="pub-title">Metabarcoding analysis of home composts reveals distinctive fungal communities with a high number of unassigned sequences.</div>
-                    <div class="pub-journal">Microbiology (2015).</div>
-                    <div class="pub-links">
-                        <a href="https://www.microbiologyresearch.org/content/journal/micro/10.1099/mic.0.000153">🔗 DOI Link</a>
-                    </div>
+            <h3 class="year-header">2015</h3>
+            
+            <div class="pub-item">
+                <div class="pub-authors">Langarica-Fuentes A, <span class="me">Fox G</span>, Robson GD</div>
+                <div class="pub-title">Metabarcoding analysis of home composts reveals distinctive fungal communities with a high number of unassigned sequences.</div>
+                <div class="pub-journal">Microbiology (2015).</div>
+                <div class="pub-links">
+                    <a href="https://www.microbiologyresearch.org/content/journal/micro/10.1099/mic.0.000153">DOI Link</a>
                 </div>
-                
-                <div class="pub-item">
-                    <div class="pub-authors">Dr Madhura Castelino, MBBS, Stephen Eyre, PhD, John Moat, MSc, <span class="me">Graeme Fox</span>, MSc, Paul Martin, MPhil, Umer Ijaz, PhD, Christopher Quince, PhD, Pauline Ho, PhD, Mathew Upton, PhD, Anne Barton, PhD</div>
-                    <div class="pub-title">The skin microbiome in psoriatic arthritis: methodology development and pilot data.</div>
-                    <div class="pub-journal">The Lancet: 385(1): S27 (2015).</div>
-                    <div class="pub-links">
-                        <a href="https://doi.org/10.1016/S0140-6736(15)60342-7">🔗 DOI Link</a>
-                    </div>
+            </div>
+            
+            <div class="pub-item">
+                <div class="pub-authors">Dr Madhura Castelino, MBBS, Stephen Eyre, PhD, John Moat, MSc, <span class="me">Graeme Fox</span>, MSc, Paul Martin, MPhil, Umer Ijaz, PhD, Christopher Quince, PhD, Pauline Ho, PhD, Mathew Upton, PhD, Anne Barton, PhD</div>
+                <div class="pub-title">The skin microbiome in psoriatic arthritis: methodology development and pilot data.</div>
+                <div class="pub-journal">The Lancet: 385(1): S27 (2015).</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1016/S0140-6736(15)60342-7">DOI Link</a>
                 </div>
             </div>
 
-            <div class="year-section">
-                <h3 class="year-header">2014</h3>
-                
-                <div class="pub-item">
-                    <div class="pub-authors">Adrian Langarica-Fuentes, Pauline S Handley PhD, Ashley Houlden PhD, <span class="me">Graeme Fox</span>, Geoffrey D Robson PhD</div>
-                    <div class="pub-title">An investigation of the biodiversity of thermophilic and thermotolerant fungal species in composts using culture-based and molecular techniques.</div>
-                    <div class="pub-journal">Fungal Ecology: 11. 132-144. Elsevier. (2014).</div>
-                    <div class="pub-links">
-                        <a href="https://doi.org/10.1016/j.funeco.2014.05.007">🔗 DOI Link</a>
-                    </div>
+            <h3 class="year-header">2014</h3>
+            
+            <div class="pub-item">
+                <div class="pub-authors">Adrian Langarica-Fuentes, Pauline S Handley PhD, Ashley Houlden PhD, <span class="me">Graeme Fox</span>, Geoffrey D Robson PhD</div>
+                <div class="pub-title">An investigation of the biodiversity of thermophilic and thermotolerant fungal species in composts using culture-based and molecular techniques.</div>
+                <div class="pub-journal">Fungal Ecology: 11. 132-144. Elsevier. (2014).</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1016/j.funeco.2014.05.007">DOI Link</a>
                 </div>
-                
-                <div class="pub-item">
-                    <div class="pub-authors">Langarica-Fuentes, Adrian; Zafar, Urooj; Heyworth, Alan; Brown, Thomas; <span class="me">Fox, Graeme</span>; Robson, Geoff.</div>
-                    <div class="pub-title">Fungal succession in an in-vessel composting system characterised using DGGE and 454-pyrosequencing.</div>
-                    <div class="pub-journal">FEMS Microbiology Ecology:88. 296-308 (2014).</div>
-                    <div class="pub-links">
-                        <a href="https://doi.org/10.1111/1574-6941.12293">🔗 DOI Link</a>
-                    </div>
+            </div>
+            
+            <div class="pub-item">
+                <div class="pub-authors">Langarica-Fuentes, Adrian; Zafar, Urooj; Heyworth, Alan; Brown, Thomas; <span class="me">Fox, Graeme</span>; Robson, Geoff.</div>
+                <div class="pub-title">Fungal succession in an in-vessel composting system characterised using DGGE and 454-pyrosequencing.</div>
+                <div class="pub-journal">FEMS Microbiology Ecology:88. 296-308 (2014).</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1111/1574-6941.12293">DOI Link</a>
                 </div>
             </div>
 
-            <div class="year-section">
-                <h3 class="year-header">2013</h3>
-                
-                <div class="pub-item">
-                    <div class="pub-authors">David Penney PhD, Caroline Wadsworth; <span class="me">Graeme Fox</span>; Sandra L Kennedy; Richard F Preziosi; Terence A Brown.</div>
-                    <div class="pub-title">Absence of Ancient DNA in Sub-Fossil Insect Inclusions Preserved in 'Anthropocene' Colombian Copal.</div>
-                    <div class="pub-journal">PLOSONE: 8(9):e73150. (2013).</div>
-                    <div class="pub-links">
-                        <a href="https://doi.org/10.1371/journal.pone.0073150">🔗 DOI Link</a>
-                    </div>
+            <h3 class="year-header">2013</h3>
+            
+            <div class="pub-item">
+                <div class="pub-authors">David Penney PhD, Caroline Wadsworth; <span class="me">Graeme Fox</span>; Sandra L Kennedy; Richard F Preziosi; Terence A Brown.</div>
+                <div class="pub-title">Absence of Ancient DNA in Sub-Fossil Insect Inclusions Preserved in 'Anthropocene' Colombian Copal.</div>
+                <div class="pub-journal">PLOSONE: 8(9):e73150. (2013).</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1371/journal.pone.0073150">DOI Link</a>
                 </div>
             </div>
         </div>
